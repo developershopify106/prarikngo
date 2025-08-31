@@ -1,0 +1,689 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+	    cursor: url('https://dev.itsaugust.co/images/blood.svg') 16 16, auto;
+
+}
+.announcement-bar {
+    background-color: #6A0DAD; /* Purple */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 9999;
+}
+
+.announcement-bar p {
+    margin: 0;
+}
+
+.announcement-bar a {
+    color: #FF3B3F; /* Red */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.announcement-bar a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+	width: 60%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #6A0DAD;
+}
+
+/* Donate Button */
+.donate-btn a {
+    background-color: #FF3B3F;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn a:hover {
+    background-color: #cc3033;
+}
+.donate-btn {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 100px;
+    height: 109px;
+}
+/* Responsive Header */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        justify-content: flex-start;
+        margin: 10px 0;
+    }
+
+    .donate-btn {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+}
+
+/* Video Banner */
+.video-banner {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.video-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.video-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.banner-btn {
+    background-color: #FF3B3F;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+	margin-top: 15px;
+    display: inline-block;
+}
+
+.banner-btn:hover {
+    background-color: #cc3033;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .video-banner h1 {
+        font-size: 2rem;
+    }
+
+    .video-banner p {
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #6A0DAD;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Impact */
+.impact {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: #6A0DAD;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Team */
+.team {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.member-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 200px;
+}
+
+.member-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.member-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+    color: #6A0DAD;
+}
+
+.member-card p {
+    color: #666;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+blockquote {
+    background: #f1f1f1;
+    padding: 20px;
+    border-left: 5px solid #6A0DAD;
+    max-width: 400px;
+    font-style: italic;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: #6A0DAD;
+}
+
+.newsletter-form {
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 250px;
+    max-width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #FF3B3F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Contact */
+.contact {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #6A0DAD;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    background-color: #FF3B3F;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #2b0d3a;
+    color: #fff;
+    padding: 40px 20px 20px;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-left p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 33.33%;
+}
+
+.footer-center a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-center a:hover {
+    color: #FF3B3F;
+}
+
+.footer-right h4 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-socials a {
+    margin-right: 10px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.footer-socials a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-socials a:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    color: #aaa;
+}
+.footer-right {
+    width: 33.33%;
+}
+/* Footer Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-center {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-center a {
+        margin: 5px 10px;
+    }
+}
+
+
+/* Section Background */
+.mission-section {
+  background: #f3f7f9;
+  padding: 70px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container */
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.mission-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #1e3d59;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+/* Card Grid */
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+/* Individual Card */
+.mission-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Style */
+.icon {
+	font-size: 2.2rem;
+	margin-bottom: 15px;
+	color: #008080;
+	width: 100%;
+	text-align: center;
+}
+
+/* Card Title */
+.mission-card h3 {
+	font-size: 18px;
+	color: #002f3d;
+	margin-bottom: 15px;
+	width: 100%;
+	text-align: center;
+}
+
+/* Card Paragraph */
+.mission-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: #f9f9f9;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.stat-number {
+  font-size: 46px;
+  color: #CE304A;
+  margin: 0 0 15px;
+  font-weight: bold;
+}
+
+.only-label {
+  color: #010B50;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stat-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.stat-card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+.main-div {
+    width: 33.33%;
+}
+.main-div-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+.footer-socials {
+    margin-top: 15px;
+}
+.footer-left {
+    width: 33.33%;
+}
+
+section#Ourcampaigns {
+    margin: 20px 0;
+}
+.Ourcampaigns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.our_team_ourcampaigns {
+    width: 33.33%;
+}
+.join-us {
+  background: linear-gradient(180deg,#2b55d6 0%,#1946b6 60%)
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.join-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.join-us h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.join-us p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.join-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  background: #fff;
+  color: #e91e63;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.join-btn:hover {
+  background: #ffeb3b;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+	.menu {
+		display: flex;
+		width: 100%;
+	}
+	.logo {
+		width: 100%;
+	}
+	.donate-btn {
+    width: 100%;
+	}
+}
