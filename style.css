@@ -194,9 +194,9 @@ body {
 }
 
 .about h2 {
-    font-size: 2.5rem;
+   font-size: 1.5rem;
     color: #6A0DAD;
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
 .about p {
@@ -632,6 +632,7 @@ section#Ourcampaigns {
 
 .our_team_ourcampaigns {
     width: 33.33%;
+	    margin: 15px;
 }
 .join-us {
   background: linear-gradient(180deg,#2b55d6 0%,#1946b6 60%)
@@ -675,6 +676,11 @@ section#Ourcampaigns {
   color: #000;
 }
 
+
+.our_team_ourcampaigns img{
+width:100%;
+}
+
 @media (max-width: 768px) {
 	.menu {
 		display: flex;
@@ -686,4 +692,21 @@ section#Ourcampaigns {
 	.donate-btn {
     width: 100%;
 	}
+	.our_team_ourcampaigns {
+    width: 100%;
+}
+	.about h2 {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.main-div-wrapper .main-div {
+    width: 100%;
+}
+.team-member {
+    width: calc(100% - 15px) !important;
+}
+h2 {
+
+    margin-left: 10px;
+}
 }

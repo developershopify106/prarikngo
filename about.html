@@ -22,12 +22,18 @@
         color: #e91e63;
         margin-bottom: 30px;
     }
-    .story-content {
+    .about-us-story {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 30px;
     }
+	.story-content {
+	width: 60%;
+	}
+	.story-image {
+	width: 40%;
+	}
     .story-text {
         flex: 1 1 500px;
         font-size: 15px;
@@ -56,7 +62,9 @@
         color: #1a1a1a;
     }
     .story-highlight span {
-        color: #e91e63;
+		color: #e91e63;
+		margin: 20px 0;
+		display: inline-block;
     }
     .highlight-link {
         color: #a93dd1;
@@ -67,6 +75,9 @@
         .story-content {
             flex-direction: column;
         }
+		.story-content {
+    width: 100%;
+}
     }
     .mission-vision {
         padding: 50px 20px;
@@ -125,6 +136,7 @@
     border-radius: 10px;
     border: 2px solid #ccc;
     transition: transform 0.2s;
+	height: 400px;
     }
     .team-member img:hover {
         transform: scale(1.05);
@@ -151,6 +163,7 @@
         background: rgba(0,0,0,0.7);
         justify-content: center;
         align-items: center;
+		z-index: 9999;
     }
     .popup-content {
         background: #fff;
@@ -261,15 +274,18 @@
 
   <!-- Header -->
   <header class="main-header">
-    <div class="logo"><img src="./images/AAkrati.png" width="100%;"></div>
+    <div class="logo">
+	<a href="./index.html">
+	<img src="./images/AAkrati.jpg" width="100%;"></div>
+	</a>
     <nav class="menu">
-	      <a href="/">Home</a>
+        <a href="./index.html">Home</a>
 		<a href="./about.html">About Us</a>
         <a href="./our-team.html">Our Team</a>
         <a href="./contact.html">Contact</a>
-         <a href="./joinus.html">Join us</a>
+		<a href="./joinus.html">Join us</a>
         <a href="./donate.html">Donate</a>  
-	</nav>
+    </nav>
     <div class="donate-btn">
       <a href="./donate.html">Donate</a>
     </div>
@@ -278,20 +294,33 @@
  <section class="story-section">
         <div class="story-container">
             <div class="story-title">THE JOURNEY THAT SPARKED MYNA MAHILA</div>
-            <div class="story-content">
-                <div class="story-text">
-                    I met Priya while conducting household surveys in Mumbai’s slums. One afternoon, I found her in visible pain. After much hesitation, she confided that she had been suffering from a vaginal infection for months. The clinic was minutes away, but she was too ashamed to seek help. “How can I discuss such private matters? What would people say?”, she whispered.<br><br>
-                    A few streets away, I met another woman with three daughters. She had ensured they completed school but refused to let them take jobs. “Women in our community don’t work outside the home”, she said. “It’s not respectable.” Her eldest daughter was married at 17. Months later, she died from cervical cancer — untreated. The stigma was worse than the disease.
-                    <div class="story-highlight">
-                        That’s why I founded Myna Mahila in 2015: to break that silence. Women called me <span>Tota Myna</span> because I asked too many questions, but I realized speaking up was a privilege many didn’t have. Like the <a href="#" class="highlight-link">chatty Myna bird</a>, we ensure women find their voice to claim their future.<br><br>
-                        <span>–Dr. Suhani Jalota, Founder</span>
-                    </div>
-                </div>
-                <div class="story-image">
-                    <img src="/mnt/data/bf02790e-1f55-4708-978a-823489e1ab79.png" alt="Myna Mahila Founder">
-                </div>
+				<div class="about-us-story">
+					<div class="story-content">
+						<div class="story-text">When I started Prarik foundation, it wasn't just to run an NGO — it was to ignite a movement.
+						A movement that challenges deep-rooted taboos, that gives voice to the silenced, and that brings dignity, awareness, and equality to every corner of our society — especially where it has long been denied.<br>I come from the same soil where young girls are taught to hide their pain, where periods are whispered about behind closed doors, and where vulnerability is seen as weakness. I have seen the shame in their eyes, the silence in their stories — and I knew something had to change.<br>Aakrati means "to shape", and that’s exactly what we aim to do — shape a new society. One where *no one is left unserved*, no dream is left unsupported, and no child grows up believing their natural identity is something to hide.<br>From our *First Period Party* campaign that celebrates womanhood with pride, to our community empowerment programs, we work every single day to turn pain into power, stigma into strength, and awareness into action.<br>This isn’t charity. This is solidarity.
+						This is not just about pads — it’s about power.
+						And this is not my story alone — it is *our collective fight* to build a world where everyone, regardless of gender, caste, geography or background, is treated with dignity, love, and opportunity.
+						<br>
+						We are not here to serve.
+						We are here to stand with.
+						We are not here to "help the poor."
+						We are here to *rewrite the system* that creates poverty, exclusion, and silence.<br>
+						</div>
+						<div class="story-highlight">
+						Prarik Foundation is more than a name — it is a promise.
+						To listen. To act. To rise. Together.<br>
+						Thank you for walking this path with us.
+						We’re just getting started.<br>
+						<span>– Neeraj Bouddh</span>
+						<p>Founder & Vision Keeper
+						Prarik Foundation</p>
+						</div>
+					</div>
+					<div class="story-image">
+						<img src="./images/mainimage.jpg" alt="Prarik foundation">
+					</div>
+				</div>
             </div>
-        </div>
     </section>
 	  <!-- Video Banner -->
   <section class="video-banner">
@@ -346,16 +375,17 @@
 </div>
 <script>
 const teamMembers = [
-    {name: "Dr. Suhani Jalota", title: "Founder & Board of Directors", img: "https://placehold.co/300x300", desc: "Brief description about Suhani."},
-    {name: "Sweta Kanvadiye", title: "Director", img: "https://placehold.co/300x300", desc: "Brief description about Sweta."},
-    {name: "Shraddha Kale", title: "Associate Director - Health", img: "https://placehold.co/300x300", desc: "Brief description about Shraddha."},
-    {name: "Vaishnavi Aahav", title: "Finance Lead", img: "https://placehold.co/300x300", desc: "Brief description about Vaishnavi."},
-    {name: "Aayushi Darshana", title: "HR Lead", img: "https://placehold.co/300x300", desc: "Brief description about Aayushi."},
-    {name: "Archana Phalke", title: "Sales & Logistics Lead", img: "https://placehold.co/300x300", desc: "Brief description about Archana."},
-    {name: "Shalini Gupta", title: "Fellow", img: "https://placehold.co/300x300", desc: "Brief description about Shalini."},
-    {name: "Noorjahan Shaikh", title: "Pad Woman", img: "https://placehold.co/300x300", desc: "Brief description about Noorjahan."},
-    {name: "Dr. Rachie Chaudhary", title: "Consultant Doctor", img: "https://placehold.co/300x300", desc: "Brief description about Rachie."},
-    {name: "Sunita Bhawar", title: "Field Coordinator", img: "https://placehold.co/300x300", desc: "Brief description about Sunita."}
+    {name: "Gaurav Sir", title: "Chief Financial Advisor", img: "./images/Gaurav-Sir.jpg", desc: ""},
+    {name: "Shreya", title: "CA Finalist", img: "./images/Shreya.jpg", desc: "Shreya is a CA Finalist currently pursuing her articleship at a Chartered Accountancy firm. She completed her schooling at Mahatma Gandhi Convent Higher Secondary School and holds a graduate degree in commerce.With a growing interest in legal frameworks and tax compliance, Shreya brings precision, clarity, and a thoughtful approach to her role. As a Legal and Compliance Coordinator, she aims to contribute meaningfully by simplifying legal processes and supporting ethical practices.Driven by purpose, she looks forward to making a positive impact through her work."},
+    {name: "Somya Joshi", title: "Community Engagement & Volunteer Training Lead", img: "./images/Somya-Joshi.jpg", desc: "Somya Joshi plays a key role in empowering Pareek Foundation’s volunteers with effective communication and awareness strategies. She trains them to confidently engage with communities, break menstrual taboos, and spread knowledge about menstrual health. Her sessions ensure that every outreach effort not only educates but inspires change, helping girls and women feel heard, supported, and empowered."},
+    {name: "Ashritha", title: "Team member", img: "./images/Ashritha.jpg", desc: "Team member"},
+	
+  //  {name: "Aayushi Darshana", title: "HR Lead", img: "https://placehold.co/300x300", desc: "Brief description about Aayushi."},
+  //  {name: "Archana Phalke", title: "Sales & Logistics Lead", img: "https://placehold.co/300x300", desc: "Brief description about Archana."},
+  //  {name: "Shalini Gupta", title: "Fellow", img: "https://placehold.co/300x300", desc: "Brief description about Shalini."},
+  //  {name: "Noorjahan Shaikh", title: "Pad Woman", img: "https://placehold.co/300x300", desc: "Brief description about Noorjahan."},
+  //  {name: "Dr. Rachie Chaudhary", title: "Consultant Doctor", img: "https://placehold.co/300x300", desc: "Brief description about Rachie."},
+  //  {name: "Sunita Bhawar", title: "Field Coordinator", img: "https://placehold.co/300x300", desc: "Brief description about Sunita."}
 ];
 
 const teamContainer = document.getElementById("team");
@@ -387,6 +417,72 @@ window.onclick = (e) => {
     }
 };
 
+
+</script>
+
+
+<div class="section-container-mission">
+<div class="mission-container">
+<h2>Our Advisiosary Board.</h2>
+<div class="team-container" id="teammem">
+    <!-- Members will be injected here by JS -->
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popupmain">
+    <div class="popup-content">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img id="popupImg" src="" alt="">
+        <h3 id="popupName"></h3>
+        <p id="popupTitle"></p>
+        <p id="popupDesc"></p>
+    </div>
+</div>
+</div>
+</div>
+
+<script>
+const teamMemberss = [
+    {name: "Dr Priya Chitale", title: "Best Dietitian - Ms. Priya | 20+ Yrs of Exp. | Indore", img: "./images/Dr-Priya-Chitale.jpg", desc: ""},
+    {name: "Rinchen Angmo", title: "Mental and Emotional Well being Advisor", img: "./images/Rinchen-Angmo.jpg", desc: ""},
+ //   {name: "Somya Joshi", title: "Community Engagement & Volunteer Training Lead", img: "./images/Somya-Joshi.jpg", desc: "Somya Joshi plays a key role in empowering Pareek Foundation’s volunteers with effective communication and awareness strategies. She trains them to confidently engage with communities, break menstrual taboos, and spread knowledge about menstrual health. Her sessions ensure that every outreach effort not only educates but inspires change, helping girls and women feel heard, supported, and empowered."},
+ //   {name: "Ashritha", title: "Team member", img: "./images/Ashritha.jpg", desc: "Team member"},
+  //  {name: "Aayushi Darshana", title: "HR Lead", img: "https://placehold.co/300x300", desc: "Brief description about Aayushi."},
+  //  {name: "Archana Phalke", title: "Sales & Logistics Lead", img: "https://placehold.co/300x300", desc: "Brief description about Archana."},
+  //  {name: "Shalini Gupta", title: "Fellow", img: "https://placehold.co/300x300", desc: "Brief description about Shalini."},
+  //  {name: "Noorjahan Shaikh", title: "Pad Woman", img: "https://placehold.co/300x300", desc: "Brief description about Noorjahan."},
+  //  {name: "Dr. Rachie Chaudhary", title: "Consultant Doctor", img: "https://placehold.co/300x300", desc: "Brief description about Rachie."},
+  //  {name: "Sunita Bhawar", title: "Field Coordinator", img: "https://placehold.co/300x300", desc: "Brief description about Sunita."}
+];
+
+const teamContainersss = document.getElementById("teammem");
+teamMemberss.forEach(member => {
+    const memberDiv = document.createElement("div");
+    memberDiv.classList.add("team-member");
+    memberDiv.innerHTML = `
+        <img src="${member.img}" alt="${member.name}">
+        <h4>${member.name}</h4>
+        <p>${member.title}</p>
+    `;
+    memberDiv.onclick = () => {
+        document.getElementById("popupImg").src = member.img;
+        document.getElementById("popupName").innerText = member.name;
+        document.getElementById("popupTitle").innerText = member.title;
+        document.getElementById("popupDesc").innerText = member.desc;
+        document.getElementById("popup").style.display = "flex";
+    };
+    teamContainersss.appendChild(memberDiv);
+});
+
+document.getElementById("closeBtn").onclick = () => {
+    document.getElementById("popupmain").style.display = "none";
+};
+
+window.onclick = (e) => {
+    if (e.target === document.getElementById("popup")) {
+        document.getElementById("popup").style.display = "none";
+    }
+};
 
 </script>
 <!-- Slider Section -->
@@ -506,11 +602,9 @@ showSlide(index);
 	  </div>
       <div class="footer-right">
         <h4>Address</h4>
-		<h3>🌟 NGO Name</h3>
-        <p>
-          123 Humanity Lane,<br>
-          Bandra West, Mumbai,<br>
-          Maharashtra, India - 400050
+		<h3>🌟 Prarik foundation</h3>
+        <p>Dewas,<br>
+          Madhya Pradesh, India - 455001
         </p>
         <div class="footer-socials">
           <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
